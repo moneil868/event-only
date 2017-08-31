@@ -1,4 +1,4 @@
-<h1>Locations</h1>
+<!-- <h1>Locations</h1>
 
 <% @locations.each do |current_location| %>
   <div class="location">
@@ -7,4 +7,14 @@
     <%= current_location.description %><br />
     <%= link_to image_tag(current_location.image, class: "location"), location_path(current_location) %>
   </div>
+<% end %> -->
+
+<h1>EventOnly</h1>
+
+<% @locations.each do |current_location| %>
+  <%= render 'single_location', location: current_location %>
 <% end %>
+
+<p>
+  <%= link_to 'New Location', new_location_path %>
+</p>
