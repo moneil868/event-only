@@ -6,4 +6,4 @@
   City: <%= @event.city %> <br/>
 </p>
 
-<%= link_to('Back to Events', events_path) %>
+<%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to('Back to Events', events_path) %>

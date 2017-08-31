@@ -1,8 +1,9 @@
+<p><%= link_to "New Event", new_event_path %></p>
 <% @events.each do |event| %>
 <div class="event-block">
   <h2 class="event">
-    <%= link_to(event.name, event_path(event)) %>
+    <%= link_to event.name, event_path(event) %>
   </h2>
-  <p class="date"><%= event.date %></p>
+  <p class="date"><%= event.date %> | <%= event.city %></p>
 </div>
 <% end %>
